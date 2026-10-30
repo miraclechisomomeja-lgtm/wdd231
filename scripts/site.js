@@ -8,14 +8,18 @@ document.querySelector("#lastModified").textContent =
 
 
 
-const navButton = document.querySelector("#ham-btn");
-const navLinks = document.querySelector("#nav-bar");
-
 navButton.addEventListener("click", () => {
     navLinks.classList.toggle("show");
 
     const isOpen = navLinks.classList.contains("show");
+
     navButton.setAttribute("aria-expanded", isOpen);
+    navButton.textContent = isOpen ? "✕" : "☰";
+    navButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+});
 
 
 });
