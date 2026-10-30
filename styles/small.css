@@ -1,0 +1,223 @@
+/*========= COLOR SCHEME =======
+terra cotta #E07A5F
+deep slate blue #3D405B,
+*/
+
+/******************** SITE WIDE ****************/
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header,
+main,
+nav,
+footer {
+    padding: 15px;
+}
+
+/******************** HEADER ********************/
+
+header {
+    display: grid;
+    grid-template-columns: 24px 1fr 44px;
+    align-items: end;
+    padding: 5px 0 5px 10px;
+    border-bottom: 1px solid #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3D405B;
+}
+
+/******************** HAMBURGER ********************/
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #3D405B;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+
+/******************** NAVIGATION ********************/
+
+.navigation {
+    display: none;
+    background-color: #3D405B;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #eee;
+    text-decoration: none;
+    border: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    background-color: #E07A5F;
+}
+
+.navigation a:focus {
+    background-color: #E07A5F;
+}
+
+
+h1 {
+    margin-left: 10px;
+    color: #3D405B;
+}
+
+h2 {
+    background-color: #3D405B;
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.about-content p {
+    line-height: 1.6;
+    padding: 10px;
+}
+
+.card {
+    background-color: #ddd;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+}
+
+.card img {
+    display: block;
+    margin: 20px auto;
+}
+
+.course-filters {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.course-filters button {
+    flex: 1;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3D405B;
+    color: #eee;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.course-filters button:hover {
+    background-color: #E07A5F;
+}
+
+.courses-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.course-card {
+    padding: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #E07A5F;
+    font-weight: bold;
+}
+
+.course-card.completed {
+    background-color: #b8e7d2;
+}
+
+.credit-total {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/******************** FOOTER ********************/
+
+footer {
+    background-color: #3D405B;
+    color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #ccc solid 1px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
