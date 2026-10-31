@@ -18,7 +18,7 @@ allCoursesButton.addEventListener("click", () => {
                 card.textContent = `${course.subject} ${course.number}`;
 
                 if (course.completed) {
-                        card.textContent = `✓${course.subject} ${course.number}`;
+                        card.textContent = `✓ ${course.subject} ${course.number}`;
                         card.classList.add("completed")
                 }
                 coursesContainer.appendChild(card);
@@ -37,7 +37,7 @@ wddCoursesButton.addEventListener("click", () => {
                 card.textContent = `${course.subject} ${course.number}`;
 
                 if (course.completed) {
-                        card.textContent = `✓${course.subject} ${course.number}`;
+                        card.textContent = `✓ ${course.subject} ${course.number}`;
                         card.classList.add("completed")
                 }
                 coursesContainer.appendChild(card);
@@ -57,7 +57,7 @@ cseCoursesButton.addEventListener("click", () => {
                 card.textContent = `${course.subject} ${course.number}`;
 
                 if (course.completed) {
-                        card.textContent = `✓${course.subject} ${course.number}`;
+                        card.textContent = `✓ ${course.subject} ${course.number}`;
                         card.classList.add("completed")
                 }
                 coursesContainer.appendChild(card);
