@@ -58,15 +58,6 @@ header span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.hamburger::before {
-    content: "\2630";
-    font-size: 2rem;
-
-}
-
-.hamburger.show::before {
-    content: "\00D7";
-}
 
 
 /******************** NAVIGATION ********************/
