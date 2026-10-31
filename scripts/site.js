@@ -1,7 +1,10 @@
+// Display the current year in the footer
 const currentYear = new Date().getFullYear();
 
 document.querySelector("#currentyear").textContent = currentYear;
 
+
+// Display the last modified date
 document.querySelector("#lastModified").textContent =
     `Last Modified: ${document.lastModified}`;
 
@@ -18,5 +21,4 @@ navButton.addEventListener("click", () => {
     navButton.textContent = isOpen ? "✕" : "☰";
     navButton.setAttribute("aria-expanded", isOpen);
 });
-
 
