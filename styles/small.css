@@ -6,7 +6,7 @@ deep slate blue #3D405B,
 /******************** SITE WIDE ****************/
 
 * {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
 
@@ -34,13 +34,12 @@ header {
 
 header img {
     display: block;
-    width: 40px;
     height: auto;
     padding-bottom: 5px;
 }
 
 header span {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #3D405B;
     margin-left: 20px;
@@ -86,16 +85,20 @@ header span {
     border: solid 1px #ddd;
 }
 
-.navigation li.current {
+.navigation a[aria-current="page"] {
     background-color: #eee;
+    color: #3D405B;
+    font-weight: bold;
 }
 
 .navigation a:hover {
     background-color: #E07A5F;
+    color: #3D405B
 }
 
 .navigation a:focus {
     background-color: #E07A5F;
+    color: #3D405B
 }
 
 
@@ -112,6 +115,11 @@ h2 {
     padding: 10px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .certificate h2 {
@@ -162,13 +170,13 @@ h2 {
 
 .course-filters button:hover {
     background-color: #E07A5F;
+    color: #3D405B
 }
 
 .courses-card {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .course-card {
@@ -182,7 +190,7 @@ h2 {
 }
 
 .course-card.completed {
-    background-color: #b8e7d2;
+    background-color: #0ba05d;
 }
 
 .credit-total {
