@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+
+}
+
+header h1 {
+  color: #5c0477;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  padding: 1rem;
+  background-color: lightgray;
+  box-shadow: 0 10px 40px rgb(13, 10, 10);
+}
+
+section img {
+  width: 65%;
+  height: 65%;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 1);
+
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: rgb(185, 171, 185);
+
+}
+
+
+section p {
+  margin: 0.2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  color: #5c0477;
+  font-size: 1.7rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #5c0477;
+  color: white;
+  font-size: 1.2rem;
+}
