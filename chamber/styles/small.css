@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -30,9 +30,10 @@ header {
     text-align: center;
 }
 
-header h1 {
+header .site-name {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: 700;
     padding: 24px;
 }
 
@@ -42,7 +43,9 @@ header img {
 
 h1,
 h2,
-h3 {
+h3,
+header .site-name {
+    font-family: "Poppins", Arial, sans-serif;
     line-height: 1.2;
 }
 
@@ -80,7 +83,8 @@ footer {
     max-width: 100%;
 }
 
-main h2 {
+main h1 {
+    font-size: 1.5rem;
     text-align: center;
     color: var(--primary-color);
 }
@@ -116,7 +120,7 @@ main h2 {
     margin-bottom: 1rem;
     margin-top: 1.5rem;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 3px 10px #000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

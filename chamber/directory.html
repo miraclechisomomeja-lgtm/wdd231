@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,8 @@
 
     <meta name="author" content="Chisom Miracle Omeja">
 
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
 
-    <!-- Open Graph Metadata -->
     <meta property="og:title" content="Orlu Chamber of Commerce | Business Directory">
     <meta property="og:description"
         content="Discover businesses, services and business opportunities in Orlu, Imo State, Nigeria.">
@@ -22,14 +21,19 @@
     <meta property="og:url" content="https://miraclechisomomeja-lgtm.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
-    <link rel="preload" as="fetch" href="data/members.json" crossorigin>
-    <link rel="preload" as="image" href="images/hotel.svg" fetchpriority="high">
-    <!-- CSS Files -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript -->
+
     <script src="scripts/directory.js" defer></script>
 </head>
 
@@ -37,7 +41,7 @@
     <header>
         <img src="images/logo-reversed.svg" alt="Site logo" width="64" height="64">
 
-        <h1>Orlu Chamber of Commerce</h1>
+        <p class="site-name">Orlu Chamber of Commerce</p>
         <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
             ☰
         </button>
@@ -51,7 +55,7 @@
     </header>
 
     <main>
-        <h2>Business Directory</h2>
+        <h1>Business Directory</h1>
         <div class="menu">
             <button id="grid">Grid</button>
             <button id="list">List</button>
@@ -86,3 +90,5 @@
 
     </footer>
 </body>
+
+</html>
