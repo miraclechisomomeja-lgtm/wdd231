@@ -1,10 +1,11 @@
 :root {
     --primary-color: #172B4D;
     --secondary-color: #D97736;
+    --secondary-dark: #A94F18;
+    --secondary-light: #F08A4B;
     --background-color: #faf9f6;
     --background-color-2: lightgray;
-    --secondary-dark: #A94F18;
-    --Ssecondary-light: #F08A4B;
+
     --text-color: #292929;
 }
 
@@ -128,7 +129,7 @@ main h2 {
 .business-card img {
     width: 100%;
     height: auto;
-    aspect-ratio: 3/1;
+    aspect-ratio: 3 / 1;
     border-radius: 5px;
     object-fit: contain;
     display: block;
@@ -137,7 +138,7 @@ main h2 {
 
 .business-card p {
     margin: 0.5rem 0;
-    text-align: center;
+    text-align: left;
     font-size: 0.95rem;
     font-weight: bold;
     overflow-wrap: anywhere;
@@ -216,7 +217,7 @@ footer h3 {
 }
 
 footer h3 {
-    color: var(--Ssecondary-light);
+    color: var(--secondary-light);
     margin-bottom: 0.5rem;
 }
 
@@ -256,4 +257,8 @@ footer h3 {
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+#members-cards {
+    min-height: 100vh;
 }

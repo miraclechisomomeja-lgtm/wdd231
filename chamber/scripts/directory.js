@@ -11,7 +11,7 @@ const displayMembers = (businesses) => {
         card.classList.add("business-card");
 
         card.innerHTML = `
-            <div class="business-image"><img src="images/${business.image}" alt="${business.name}" width="400" height="133" ${index === 0 ?`loading="eager" fetchpriority="high"` : `loading="lazy"`}>
+            <div class="business-image"><img src="images/${business.image}" alt="${business.name}" width="400" height="133" ${index < 3 ? 'loading="eager" fetchpriority="high"' : index < 6 ? 'loading="eager"' : 'loading="lazy"'}>
             </div>
             <div class="business-info">
                 <h3>${business.name}</h3>
