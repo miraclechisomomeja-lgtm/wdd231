@@ -1,0 +1,86 @@
+{
+  "businesses": [
+    {
+      "name": "Orlu Grand Hotels",
+      "address": "15 ebenator Road Orlu",
+      "phone": "08012345678",
+      "website": "https://orlugrandhotel.com",
+      "image": "hotel.svg",
+      "membershipLevel": 3,
+      "description": "Hotel and hospitality services"
+    },
+    {
+      "name": "Sunrise Supermarket",
+      "address": "45 International Market Orlu",
+      "phone": "08012345678",
+      "website": "https://sunrise.com",
+      "image": "sunrise.svg",
+      "membershipLevel": 1,
+      "description": "Retail"
+    },
+    {
+      "name": "Eastern Logistics",
+      "address": "18 Owerri Road Orlu",
+      "phone": "08012350978",
+      "website": "https://easternlogistic.com",
+      "image": "eastern-logistics.svg",
+      "membershipLevel": 2,
+      "description": "Transportation"
+    },
+    {
+      "name": "Prime Furniture Works",
+      "address": "64 Ngumoha Road Orlu",
+      "phone": "08012342367",
+      "website": "https://primefurniturework.com",
+      "image": "prime-furniture.svg",
+      "membershipLevel": 3,
+      "description": "Manufacturing"
+    },
+    {
+      "name": "Excellence Business Consult",
+      "address": "13 Old Market Orlu",
+      "phone": "08012347777",
+      "website": "https://excellence.com",
+      "image": "excellence-consult.svg",
+      "membershipLevel": 3,
+      "description": "Professional Services"
+    },
+    {
+      "name": "Orlu Restaurant & Lounge",
+      "address": "89 Nkwitor Junction Orlu",
+      "phone": "08012487378",
+      "website": "https://orlulounge.com",
+      "image": "lounge.svg",
+      "membershipLevel": 2,
+      "description": "Restaurant, Dining and Leisure Services"
+    },
+    {
+      "name": "White Rose Pharmacy",
+      "address": "55 BSC Road Orlu",
+      "phone": "09042345678",
+      "website": "https://whiterosepharmacy.com",
+      "image": "white-rose-pharmacy.svg",
+      "membershipLevel": 1,
+      "description": "Wholesale pharmaceuticals"
+    },
+
+    {
+      "name": "Greenfield Pharmacy",
+      "address": "8 Mgbee Road Orlu",
+      "phone": "09042345678",
+      "website": "https://greenfield.com",
+      "image": "greenfield-pharmacy.svg",
+      "membershipLevel": 1,
+      "description": "Wholesale pharmacy"
+    },
+    {
+      "name": "Sunlight Electronics",
+      "address": "54 Saint Joseph Orlu",
+      "phone": "09042345678",
+      "website": "https://sunlight.com",
+      "image": "sunlight-electronics.svg",
+      "membershipLevel": 1,
+      "description": "Electronics and home appliances"
+    }
+  ]
+}

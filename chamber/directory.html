@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orlu Chamber of Commerce | Business Directory</title>
+
+    <meta name="description"
+        content="Explore the Orlu Chamber of Commerce business directory to discover local businesses, services and business opportunities in Orlu, Imo State, Nigeria.">
+
+    <meta name="author" content="Chisom Miracle Omeja">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Orlu Chamber of Commerce | Business Directory">
+    <meta property="og:description"
+        content="Discover businesses, services and business opportunities in Orlu, Imo State, Nigeria.">
+    <meta property="og:image" content="https://miraclechisomomeja-lgtm.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://miraclechisomomeja-lgtm.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preload" as="fetch" href="data/members.json" crossorigin>
+    <link rel="preload" as="image" href="images/hotel.svg" fetchpriority="high">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo-reversed.svg" alt="Site logo" width="64" height="64">
+
+        <h1>Orlu Chamber of Commerce</h1>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+        <nav id="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <h2>Business Directory</h2>
+        <div class="menu">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+
+        <div id="members-cards">
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="contact">
+            <h3>Orlu Chamber of Commerce</h3>
+            <p>Orlu Imo State Nigeria</p>
+            <p>Email: info@orluchamber.org</p>
+            <p>Phone: +2349036788924</p>
+
+        </div>
+        <div class="social">
+            <a href="https://m.facebook.com" target="_blank" rel="noopener"><img src="images/facebook.svg"
+                    alt="Facebook" width="16" height="16"></a>
+            <a href="https://github.com/miraclechisomomeja-lgtm" target="_blank" rel="noopener"><img
+                    src="images/github.svg" alt="Github" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/miraclechisomomeja" target="_blank" rel="noopener"><img
+                    src="images/linkedin.svg" alt="Linkedin" width="16" height="16"></a>
+        </div>
+        <div class="development">
+            <p>&copy; <span id="currentyear"></span> Orlu Chamber of Commerce</p>
+            <p>Chisom Miracle Omeja | WDD 231</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+
+    </footer>
+</body>

@@ -1,0 +1,259 @@
+:root {
+    --primary-color: #172B4D;
+    --secondary-color: #D97736;
+    --background-color: #faf9f6;
+    --background-color-2: lightgray;
+    --secondary-dark: #A94F18;
+    --Ssecondary-light: #F08A4B;
+    --text-color: #292929;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 64px 1fr 44px;
+    align-items: end;
+    padding: 0.2rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 24px;
+}
+
+header img {
+    width: 64px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+nav {
+    display: none;
+}
+
+nav.show {
+    display: block;
+    background-color: var(--primary-color);
+    padding: 1rem;
+
+}
+
+nav a {
+    color: var(--background-color);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--secondary-dark);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header,
+footer {
+    max-width: 100%;
+}
+
+main h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.menu button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.menu button:hover {
+    background-color: var(--secondary-dark);
+}
+
+.business-card {
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    border-top: 5px solid var(--secondary-color);
+    overflow: hidden;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card h3 {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+
+}
+
+.business-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
+    border-radius: 5px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+}
+
+.business-card p {
+    margin: 0.5rem 0;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+
+.business-card a {
+    color: var(--primary-color);
+
+}
+
+.business-card a:hover {
+    color: var(--secondary-dark);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.list .business-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--background-color-2);
+    border-radius: 0;
+    text-align: left;
+
+}
+
+.list .business-card:nth-child(even) {
+    background-color: var(--background-color-2);
+}
+
+.list .business-image {
+    display: none;
+}
+
+.list .business-info {
+    display: contents;
+}
+
+.list .business-info h3,
+.list .business-info p,
+.list .business-info a {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p,
+footer h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+footer h3 {
+    color: var(--Ssecondary-light);
+    margin-bottom: 0.5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin-bottom: 1rem;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--background-color) solid 1px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+}
+
+.social a:hover {
+    background-color: var(--secondary-dark);
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.hamburger {
+    background: none;
+    padding: 24px 5px;
+    border: none;
+    color: var(--background-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
