@@ -67,7 +67,7 @@ nav.show {
 nav.show a {
     display: block;
     width: 100%;
-    pad: 0.9rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     border-radius: 0;
     text-align: left;
 }
