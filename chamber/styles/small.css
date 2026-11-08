@@ -38,7 +38,7 @@ header .site-name {
 }
 
 header img {
-    width: 64px;
+    width: 80px;
 }
 
 h1,
@@ -275,7 +275,7 @@ footer h2 {
     border: none;
     color: var(--background-color);
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
