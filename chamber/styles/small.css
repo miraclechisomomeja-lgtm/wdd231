@@ -55,15 +55,30 @@ nav {
 
 nav.show {
     display: block;
+    grid-column: 1/-1;
+    width: auto;
+    margin: 0;
+    padding: 0;
     background-color: var(--primary-color);
     padding: 1rem;
 
 }
 
+nav.show a {
+    display: block;
+    width: 100%;
+    pad: 0.9rem 1.5rem;
+    border-radius: 0;
+    text-align: left;
+}
+
+
 nav a {
+    display: block;
     color: var(--background-color);
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
@@ -254,6 +269,7 @@ footer h2 {
 }
 
 .hamburger {
+    display: block;
     background: none;
     padding: 24px 5px;
     border: none;
