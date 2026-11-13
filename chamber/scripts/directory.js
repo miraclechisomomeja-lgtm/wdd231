@@ -1,7 +1,7 @@
-// JSON file location
+
 const url = "data/members.json";
 
-// Display business information
+
 const displayMembers = (businesses) => {
     const cards = document.querySelector("#members-cards");
 
@@ -15,9 +15,9 @@ const displayMembers = (businesses) => {
             </div>
             <div class="business-info">
                 <h3>${business.name}</h3>
-                <p>${business.address}</p>
-                <p>${business.phone}</p>
-                <p><a href="${business.website}" target="_blank" rel="noopener noreferrer">${business.website}</a></p>
+                <p><strong>Address: </strong>${business.address}</p>
+                <p><strong>Phone: </strong>${business.phone}</p>
+                <a href="${business.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
         `;
 
@@ -25,7 +25,7 @@ const displayMembers = (businesses) => {
     });
 };
 
-// Fetch business information
+
 const getMembers = async () => {
     try {
         const response = await fetch(url);
@@ -43,7 +43,6 @@ const getMembers = async () => {
     }
 };
 
-// Start with Grid View
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#members-cards");
@@ -61,26 +60,12 @@ function showList() {
     display.classList.remove("grid");
 }
 
-// Display current year
+
 document.querySelector("#currentyear").textContent =
     new Date().getFullYear();
 
-// Display last modified date
 document.querySelector("#lastModified").textContent =
     document.lastModified;
 
-const navButton = document.querySelector("#ham-btn");
-const navLinks = document.querySelector("#nav-bar");
 
-navButton.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-
-    const isOpen = navLinks.classList.contains("show");
-
-    navButton.textContent = isOpen ? "✕" : "☰";
-    navButton.setAttribute("aria-expanded", isOpen);
-});
-
-
-// Load businesses
 getMembers();

@@ -26,6 +26,18 @@
         text-align: left;
         font-size: 1.5rem;
     }
+
+    .community-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -47,6 +59,7 @@
         text-align: left;
         font-size: 1.5rem;
     }
+
 
     header {
         display: grid;
@@ -71,6 +84,48 @@
         align-items: center;
         justify-self: end;
         gap: 15px;
+    }
+
+    .business-card {
+        width: 100%;
+    }
+
+    #weather-forecast {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 5rem;
+    }
+
+    #weather-forecast h3 {
+        grid-column: 1/4;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    #weather {
+        margin-top: 0;
+    }
+
+    #current-weather {
+        height: 330px;
+    }
+
+    .home-info {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        margin-bottom: 2rem;
+
+    }
+
+    .home-info>section {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .community-info {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     header,
