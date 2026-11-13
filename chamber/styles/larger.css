@@ -1,7 +1,19 @@
+@media screen and (max-width: 599px) {
+    .list .business-card {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 @media screen and (min-width: 768px) {
 
     header {
-        grid-template-columns: 64px 1fr;
+        grid-template-columns: 50px minmax(0, 1fr);
+    }
+
+    header img {
+        width: 80px;
+        max-width: 100%;
     }
 
     nav,
@@ -23,7 +35,7 @@
     }
 
     main h1 {
-        text-align: left;
+        text-align: center;
         font-size: 1.5rem;
     }
 
@@ -56,7 +68,7 @@
     }
 
     main h1 {
-        text-align: left;
+        text-align: center;
         font-size: 1.5rem;
     }
 
