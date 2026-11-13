@@ -112,10 +112,11 @@ footer {
     max-width: 100%;
 }
 
-main h2 {
+main h1 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .menu button {
@@ -326,8 +327,9 @@ footer h2 {
 }
 
 .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
 }
 
 .hero-content a {
@@ -341,11 +343,6 @@ footer h2 {
 
 .hero-content a:hover {
     background-color: var(--secondary-dark);
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.2rem;
 }
 
 #spotlight-container {
