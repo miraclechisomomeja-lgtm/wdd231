@@ -681,25 +681,11 @@ footer h2 {
 
 /* Modal styling */
 .join-page dialog {
-    max-width: 450px;
-    width: 90%;
-    margin: auto;
-    padding: 1.5rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-}
-
-.join-page dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-
-
-.join-page dialog {
+    position: relative;
     border: 1px solid rgb(0 0 0 / 10%);
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     padding: 1rem;
+    margin: auto;
     background-color: #fff;
     box-shadow: 0 0 3rem #777;
     width: 90%;
