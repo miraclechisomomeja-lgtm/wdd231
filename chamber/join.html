@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orlu Chamber of Commerce | Business Directory</title>
+
+    <meta name="description"
+        content="Explore the Orlu Chamber of Commerce business directory to discover local businesses, services and business opportunities in Orlu, Imo State, Nigeria.">
+
+    <meta name="author" content="Chisom Miracle Omeja">
+
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Orlu Chamber of Commerce | Business Directory">
+    <meta property="og:description"
+        content="Discover businesses, services and business opportunities in Orlu, Imo State, Nigeria.">
+    <meta property="og:image" content="https://miraclechisomomeja-lgtm.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://miraclechisomomeja-lgtm.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/last-modified.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Site logo" width="80" height="70">
+
+        <p class="site-name">Orlu Chamber of Commerce</p>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+        <nav id="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="discovery.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+
+    </header>
+
+    <main class="join-page">
+        <h1>Join the Orlu Chamber of Commerce</h1>
+
+        <!-- MEMBERSHIP APPLICATION FORM -->
+        <form method="get" action="thankyou.html">
+
+            <label>
+                First Name
+                <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
+            </label>
+
+            <label>
+                Last Name
+                <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+            </label>
+
+            <label>
+                Organizational Title
+                <input type="text" name="orgTitle" title="Enter your title within your organization"
+                    autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+            </label>
+
+            <label>
+                Email Address
+                <input type="email" name="email" required autocomplete="email" placeholder="Johndoe@email.com"
+                    title="Enter your email address">
+            </label>
+
+            <label>
+                Mobile Phone
+                <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+            </label>
+
+            <label>
+                Business/Organization Name
+                <input type="text" name="organization" required autocomplete="organization"
+                    title="Enter your business or organization name">
+            </label>
+
+            <label>
+                Membership Level
+                <select name="membership" required title="Select your membership level">
+
+                    <option value="">Select a membership level</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+
+                </select>
+            </label>
+
+            <label>
+                Business/Organization Description
+                <textarea name="description" title="Describe your business or organization"></textarea>
+            </label>
+
+            <!-- Hidden timestamp -->
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <input type="submit" value="Submit Membership Application">
+
+        </form>
+
+        <!-- MEMBERSHIP CARDS -->
+        <section class="membership-options">
+            <h2>Membership Benefits</h2>
+
+            <div class="membership-cards">
+
+                <div class="membership-card">
+                    <h3>NP Membership</h3>
+                    <p>Designed for non-profit organizations.</p>
+                    <a href="#np-modal">View Benefits</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Offers basic benefits and business visibility.</p>
+                    <a href="#bronze-modal">View Benefits</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Silver Membership</h3>
+                    <p>Provides additional promotional and networking opportunities.</p>
+                    <a href="#silver-modal">View Benefits</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>Offers premium exposure and exclusive business opportunities.</p>
+                    <a href="#gold-modal">View Benefits</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NP MEMBERSHIP MODAL -->
+        <dialog id="np-modal">
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Free membership for eligible non-profit organizations.</li>
+                <li>Access to chamber networking events.</li>
+                <li>Business community connections.</li>
+            </ul>
+            <button class="close-modal" aria-label="Close">❌</button>
+        </dialog>
+
+        <!-- BRONZE MEMBERSHIP MODAL -->
+        <dialog id="bronze-modal">
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Access to chamber networking events.</li>
+                <li>Business listing in the chamber directory.</li>
+                <li>Opportunities to connect with other businesses.</li>
+            </ul>
+            <button class="close-modal" aria-label="Close">❌</button>
+        </dialog>
+
+        <!-- SILVER MEMBERSHIP MODAL -->
+        <dialog id="silver-modal">
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze Membership benefits.</li>
+                <li>Enhanced business promotion opportunities.</li>
+                <li>Priority access to selected chamber events.</li>
+            </ul>
+            <button class="close-modal" aria-label="Close">❌</button>
+        </dialog>
+
+        <!-- GOLD MEMBERSHIP MODAL -->
+        <dialog id="gold-modal">
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver Membership benefits.</li>
+                <li>Premium business promotion and visibility.</li>
+                <li>Priority sponsorship and partnership opportunities.</li>
+                <li>Exclusive networking opportunities.</li>
+            </ul>
+            <button class="close-modal" aria-label="Close">❌</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h2>Orlu Chamber of Commerce</h2>
+            <p>Orlu Imo State Nigeria</p>
+            <p>Email: info@orluchamber.org</p>
+            <p>Phone: +2349036788924</p>
+
+        </div>
+        <div class="social">
+            <a href="https://m.facebook.com" target="_blank" rel="noopener"><img src="images/facebook.svg"
+                    alt="Facebook" width="16" height="16"></a>
+            <a href="https://github.com/miraclechisomomeja-lgtm" target="_blank" rel="noopener"><img
+                    src="images/github.svg" alt="Github" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/miraclechisomomeja" target="_blank" rel="noopener"><img
+                    src="images/linkedin.svg" alt="Linkedin" width="16" height="16"></a>
+        </div>
+        <div class="development">
+            <p>&copy; <span id="currentyear"></span> Orlu Chamber of Commerce</p>
+            <p>Chisom Miracle Omeja | WDD 231</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
