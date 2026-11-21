@@ -617,3 +617,8 @@ footer h2 {
     border-radius: 6px;
     white-space: pre-line;
 }
+.join-page form,
+.membership-options {
+    padding-inline: 1rem;
+}
+
