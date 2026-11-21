@@ -237,7 +237,7 @@ main #discover-orlu,
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
     align-items: center;
     gap: 1rem;
-    max-width: 90%;
+    max-width: 100%;
     margin: 2rem auto 0;
     border: 1px solid var(--background-color-2);
     border-radius: 0;
