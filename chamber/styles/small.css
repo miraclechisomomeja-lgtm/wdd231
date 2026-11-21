@@ -107,6 +107,10 @@ main h1 {
     padding: 1rem;
     text-align: left;
 }
+.directory-main {
+    max-width: 1200px;
+    padding: 1rem;
+}
 
 main #discover-orlu,
 .community-info,
@@ -343,7 +347,7 @@ footer h2 {
 
 .hero-content p {
     margin: -0.5rem 0 0.5rem;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .hero-content a {
