@@ -107,6 +107,13 @@ main h1 {
     padding: 1rem;
     text-align: left;
 }
+.directory-main {
+    max-width: 1100px;
+    padding: 1rem;
+}
+.directory-main h1 {
+    text-align: center;
+}
 
 main #discover-orlu,
 .community-info,
