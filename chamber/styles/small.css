@@ -107,20 +107,18 @@ main h1 {
     padding: 1rem;
     text-align: left;
 }
-.directory-main {
-    max-width: 1200px;
-    padding: 1rem;
-}
+
 
 main #discover-orlu,
 .community-info,
 .home-info,
 #weather,
 #weather-forecast,
-#spotlights {
+#spotlights, .directory-main, .join-page {
     max-width: 1200px;
     padding: 1rem;
 }
+
 
 .grid {
     display: grid;
