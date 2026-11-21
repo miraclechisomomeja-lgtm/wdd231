@@ -33,7 +33,6 @@
     }
 
     .grid {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
 
     }
@@ -60,7 +59,6 @@
 
 
     .grid {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -132,11 +130,6 @@
 
     .home-info>section {
         height: 100%;
-        box-sizing: border-box;
-    }
-
-    .community-info {
-        grid-template-columns: repeat(2, 1fr);
     }
 
 
@@ -168,16 +161,4 @@
         padding: 1.85rem;
     }
 
-    header,
-    footer {
-        max-width: 100%;
-    }
-
-    footer {
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem;
-
-    }
 }

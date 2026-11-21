@@ -274,7 +274,6 @@ footer h2 {
     display: flex;
     justify-content: center;
     column-gap: 8px;
-    margin-bottom: 1rem;
     margin: 20px auto;
     border-radius: 5px;
 }
@@ -338,7 +337,7 @@ footer h2 {
     box-sizing: border-box;
     text-align: center;
     color: var(--background-color);
-    background-color: rgba(23, 43, 77, 0.45);
+    background-color: rgba(10, 26, 51, 0.45);
     border-radius: 8px;
     animation: heroTextEntrance 1.5s ease-out;
 }
