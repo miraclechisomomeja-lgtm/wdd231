@@ -3,6 +3,11 @@
     --secondary-light: #e8702a;
     --background-color: #ffffff;
     --border-color: #9e9494;
+    --background-color-2: #f2f2f2;
+    --hero-overlay: rgb(10 26 51 / 45%);
+    --shadow-dark: rgb(0 0 0);
+    --shadow-soft: rgb(0 0 0 / 10%);
+    --backdrop-color: rgb(0 0 0 / 50%);
 }
 
 * {
@@ -16,6 +21,15 @@ body {
     line-height: 1.6;
 }
 
+h1,
+h2,
+h3,
+header .site-name {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.2;
+}
+
+/* Header and navigation */
 header {
     display: grid;
     grid-template-columns: 50px minmax(0, 1fr) 44px;
@@ -28,9 +42,9 @@ header {
 
 header .site-name {
     margin: 0;
+    padding: 0.5rem;
     font-size: 1.2rem;
     font-weight: 700;
-    padding: 0.5rem;
     overflow-wrap: break-word;
 }
 
@@ -40,37 +54,14 @@ header img {
     height: auto;
 }
 
-h1,
-h2,
-h3,
-header .site-name {
-    font-family: "Roboto";
-    line-height: 1.2;
-}
-
 .hamburger {
-    display: block;
-    background: none;
     padding: 0.5rem;
+    background: none;
     border: none;
     color: var(--background-color);
     cursor: pointer;
     font-size: 1.7rem;
     font-weight: bold;
-}
-
-nav a {
-    display: block;
-    color: var(--background-color);
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: var(--secondary-light);
 }
 
 nav {
@@ -80,25 +71,41 @@ nav {
 nav.show {
     display: block;
     grid-column: 1/-1;
-    width: auto;
-    margin: 0;
-    background-color: var(--primary-color);
     padding: 1rem;
+}
 
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    color: var(--background-color);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 nav.show a {
-    display: block;
-    width: 100%;
     padding: 0.9rem 1.5rem;
     border-radius: 0;
     text-align: left;
 }
 
-main {
-    max-width: none;
-    margin: 0 auto;
+/* Shared hover color */
+nav a:hover,
+.menu button:hover,
+.business-card a:hover,
+.social a:hover,
+#spotlight-container a:hover,
+.membership-card a:hover,
+.join-page input[type="submit"]:hover {
+    background-color: var(--secondary-light);
+}
 
+/* Layout */
+main h1 {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: left;
 }
 
 main #discover-orlu,
@@ -111,27 +118,10 @@ main #discover-orlu,
     padding: 1rem;
 }
 
-header,
-footer {
-    max-width: 100%;
-}
-
-main h1 {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    text-align: left;
-    color: var(--primary-color);
-}
-
-
-.menu button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: none;
-    padding: 0.7rem 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .menu {
@@ -141,90 +131,110 @@ main h1 {
     margin-top: 1rem;
 }
 
-.menu button:hover {
-    background-color: var(--secondary-light);
+.menu button {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--background-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cards (directory and spotlights) */
+.business-card,
+#spotlight-container article {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-top: 5px solid var(--secondary-light);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .business-card {
     width: 100%;
     max-width: 400px;
-    background-color: var(--background-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    border-top: 5px solid var(--secondary-light);
-    overflow: hidden;
-    padding: 1rem;
+    margin: 1.5rem auto 1rem;
+    box-shadow: 0 3px 10px var(--shadow-dark);
+}
+
+#spotlight-container article {
+    margin: 1.5rem 0 1rem;
+    box-shadow: 0 3px 10px var(--primary-color);
+}
+
+#spotlight-container article:hover {
+    transform: translateY(-5px);
+}
+
+.business-card img,
+#spotlight-container img {
+    display: block;
+    width: 200px;
+    height: auto;
     margin: 0 auto;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    text-align: center;
-    box-shadow: 0 3px 10px #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+#spotlight-container img {
+    aspect-ratio: 3 / 1;
+}
+
+.business-card p,
+#spotlight-container article p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
 }
 
 .business-card h3 {
-    color: var(--primary-color);
     margin-top: 0.5rem;
-
 }
 
-.business-card img {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
-
-.business-card p {
+#spotlight-container article h3 {
     margin: 0.5rem 0;
-    text-align: center;
-    font-size: 0.95rem;
-
 }
 
+/* Button-style links */
+.business-card a,
+#spotlight-container a,
+.membership-card a {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: var(--background-color);
+    font-weight: 700;
+    text-decoration: none;
+}
 
 .business-card a {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    text-decoration: none;
     padding: 0.4rem 1rem;
-    border-radius: 8px;
-    margin: 0 auto;
-    font-weight: 700;
-
 }
 
-.business-card a:hover {
-    background-color: var(--secondary-light);
+#spotlight-container a,
+.membership-card a {
+    padding: 0.6rem 1rem;
+    margin-top: 0.5rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
+/* Directory list view */
 .list {
     display: flex;
     flex-direction: column;
-    gap: 0;
 }
 
 .list .business-card {
-    max-width: 90%;
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
-    margin: 0 auto;
-    margin-top: 2rem;
+    max-width: 90%;
+    margin: 2rem auto 0;
     border: 1px solid var(--background-color-2);
     border-radius: 0;
     text-align: left;
-
 }
 
 .list .business-card:nth-child(even) {
@@ -246,15 +256,20 @@ main h1 {
     overflow-wrap: anywhere;
 }
 
+#members-cards {
+    min-height: 100vh;
+}
+
+/* Footer */
 footer {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
     background-color: var(--primary-color);
     color: var(--background-color);
     text-align: center;
-    padding: 1.5rem 1rem;
-    margin-top: 2rem;
     overflow-wrap: anywhere;
 }
 
@@ -266,31 +281,25 @@ footer h2 {
 }
 
 footer h2 {
-    color: var(--secondary-light);
     margin-bottom: 0.5rem;
+    color: var(--secondary-light);
 }
 
 .social {
     display: flex;
     justify-content: center;
     column-gap: 8px;
-    margin-bottom: 1rem;
     margin: 20px auto;
-    border-radius: 5px;
 }
 
 .social a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: var(--background-color) solid 1px;
     width: 44px;
     height: 44px;
+    border: 1px solid var(--background-color);
     border-radius: 22px;
-}
-
-.social a:hover {
-    background-color: var(--secondary-light);
 }
 
 .social img {
@@ -298,11 +307,7 @@ footer h2 {
     height: 22px;
 }
 
-
-#members-cards {
-    min-height: 100vh;
-}
-
+/* Hero */
 #hero {
     position: relative;
     overflow: hidden;
@@ -316,6 +321,40 @@ footer h2 {
     animation: heroZoom 2s ease-out;
 }
 
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    padding: 1.5rem;
+    background-color: var(--hero-overlay);
+    border-radius: 8px;
+    color: var(--background-color);
+    text-align: center;
+    animation: heroTextEntrance 1.5s ease-out;
+}
+
+.hero-content h1 {
+    margin-bottom: 0;
+    color: var(--background-color);
+    text-align: center;
+}
+
+.hero-content p {
+    margin: -0.5rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.hero-content a {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-light);
+    border-radius: 8px;
+    color: var(--background-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
 @keyframes heroZoom {
     from {
         transform: scale(1.08);
@@ -324,23 +363,6 @@ footer h2 {
     to {
         transform: scale(1);
     }
-}
-
-
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    text-align: center;
-    color: var(--background-color);
-    background-color: rgba(23, 43, 77, 0.45);
-    border-radius: 8px;
-    animation: heroTextEntrance 1.5s ease-out;
 }
 
 @keyframes heroTextEntrance {
@@ -355,91 +377,22 @@ footer h2 {
     }
 }
 
-.hero-content h1 {
-    text-align: center;
-    color: var(--background-color);
-    margin-bottom: 0;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    margin-top: -0.5rem;
-}
-
-.hero-content a {
-    background-color: var(--secondary-light);
-    color: var(--background-color);
-    text-decoration: none;
-    font-weight: bold;
-    padding: .5rem 1rem;
-    border-radius: 8px;
-}
-
-.hero-content a:hover {
-    background-color: var(--secondary-light);
-}
-
-
-#spotlight-container {
+/* Spotlights, events, weather */
+#spotlight-container,
+.home-info,
+.community-info {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+#spotlight-container {
     padding: 1rem;
 }
 
-#spotlight-container article {
-    background-color: var(--background-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    border-top: 5px solid var(--secondary-light);
-    overflow: hidden;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    text-align: center;
-    box-shadow: 0 3px 10px var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#spotlight-container article:hover {
-    transform: translateY(-5px);
-}
-
-#spotlight-container article p {
-    margin: 0.5rem 0;
-    text-align: center;
-    font-size: 0.95rem;
-
-}
-
-#spotlight-container article h3 {
-    margin: 0.5rem 0;
-}
-
-#spotlight-container img {
-    width: 200px;
-    height: auto;
-    aspect-ratio: 3 / 1;
-    border-radius: 5px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
-
-#spotlight-container a {
-    display: inline;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 0.6rem 1rem;
-    margin-top: 0.5rem;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-#spotlight-container a:hover {
-    background-color: var(--secondary-light);
+.home-info,
+.community-info {
+    gap: 1.5rem;
 }
 
 #events,
@@ -451,37 +404,47 @@ footer h2 {
 
 #events h2,
 #weather h2,
-#spotlights h2 {
+#spotlights h2,
+#weather-forecast h3,
+#discover-orlu>h2 {
     text-align: center;
+}
+
+#events h2,
+#weather h2,
+#spotlights h2 {
     margin-bottom: 1.5rem;
 }
 
-#events article {
-    background-color: var(--background-color);
+#events article,
+#current-weather,
+#weather-forecast div {
     padding: 1rem;
-    border-radius: 8px;
     border-left: 5px solid var(--secondary-light);
-    margin-bottom: 1rem;
+    border-radius: 8px;
     box-shadow: 0 2px 6px;
 }
 
+#events article {
+    margin-bottom: 1rem;
+}
+
 #events article h3 {
-    color: var(--primary-color);
     margin-bottom: 0.5rem;
+}
+
+#current-weather,
+#weather-forecast div {
+    text-align: center;
+}
+
+#current-weather {
+    margin-bottom: 1rem;
+    background-color: var(--secondary-light);
 }
 
 #weather {
     margin-top: -5.5rem;
-}
-
-#current-weather {
-    background-color: var(--secondary-light);
-    padding: 1rem;
-    box-shadow: 0 2px 6px;
-    border-left: 5px solid var(--secondary-light);
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
 #weather-forecast {
@@ -489,37 +452,14 @@ footer h2 {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: -2rem;
-    padding: 1rem;
 }
 
-#weather-forecast h3 {
-    text-align: center;
-}
-
-#weather-forecast div {
-    background-color: var(--background-color);
-    padding: 1rem;
-    box-shadow: 0 2px 6px;
-    border-left: 5px solid var(--secondary-light);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.home-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-/* Discover Orlu Section */
+/* Discover page */
 #discover-orlu {
     padding: 2rem 1rem;
-    background-color: var(--background-color);
 }
 
 #discover-orlu>h2 {
-    text-align: center;
-    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -527,36 +467,21 @@ footer h2 {
     max-width: 800px;
     margin: 0 auto 2rem;
     text-align: center;
-    line-height: 1.6;
-}
-
-.community-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
 }
 
 .community-info article {
-    background-color: white;
     padding: 1.5rem;
+    background-color: var(--background-color);
     border-left: 5px solid var(--secondary-light);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px var(--shadow-soft);
 }
 
 .community-info h3 {
-    color: var(--primary-color);
     margin-top: 0;
 }
 
-.community-info p {
-    line-height: 1.6;
-}
-
-
-
-
-/* Join Page */
+/* Join page */
 .join-page {
     max-width: 1100px;
     margin: 0 auto;
@@ -565,11 +490,6 @@ footer h2 {
 
 .join-page h1 {
     text-align: center;
-}
-
-.join-page h1,
-.join-page h2 {
-    color: var(--primary-color);
 }
 
 .join-page form {
@@ -603,14 +523,10 @@ footer h2 {
 
 .join-page input[type="submit"] {
     background-color: var(--primary-color);
-    color: var(--background-color);
     border: none;
+    color: var(--background-color);
     cursor: pointer;
     font-weight: bold;
-}
-
-.join-page input[type="submit"]:hover {
-    background-color: var(--secondary-light);
 }
 
 .membership-cards {
@@ -620,12 +536,12 @@ footer h2 {
 }
 
 .membership-card {
+    padding: 1.2rem;
     background-color: var(--background-color);
     border: 1px solid var(--background-color);
     border-left: 5px solid var(--secondary-light);
     border-radius: 8px;
-    padding: 1.2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px var(--shadow-soft);
     animation: cardEntrance 1.2s ease both;
 }
 
@@ -645,23 +561,6 @@ footer h2 {
     animation-delay: 0.8s;
 }
 
-.membership-card a {
-    display: inline;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 0.6rem 1rem;
-    margin-top: 0.5rem;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-
-.membership-card a:hover {
-    background-color: var(--secondary-light);
-}
-
-/* Membership card entrance animation */
 @keyframes cardEntrance {
     from {
         opacity: 0;
@@ -674,46 +573,44 @@ footer h2 {
     }
 }
 
-/* Modal styling */
+/* Modal */
 .join-page dialog {
     position: relative;
-    border: 1px solid rgb(0 0 0 / 10%);
-    border-radius: 0.25rem;
-    padding: 1rem;
-    margin: auto;
-    background-color: var(--background-color);
-    box-shadow: 0 0 3rem var(--background-color-2);
     width: 90%;
     max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--shadow-soft);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 3rem var(--background-color-2);
 }
 
 .join-page dialog::backdrop {
-    background-color: rgb(0 0 0 / 50%);
+    background-color: var(--backdrop-color);
 }
 
 .join-page dialog button {
     position: absolute;
     top: 23px;
     right: 23px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid var(--background-color-2);
     border-radius: 6px;
 }
 
-
 .join-page dialog h2 {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 0.7rem;
     margin-top: 0;
-    text-align: center;
+    padding: 0.7rem;
+    background-color: var(--primary-color);
     border-radius: 8px;
+    color: var(--background-color);
+    text-align: center;
 }
 
-
 #results {
-    background-color: var(--background-color-2);
     padding: 0 1rem;
+    background-color: var(--background-color-2);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     white-space: pre-line;
