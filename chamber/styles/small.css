@@ -114,7 +114,7 @@ main #discover-orlu,
 .home-info,
 #weather,
 #weather-forecast,
-#spotlights, .directory-main, .join-page {
+#spotlights, .directory-main, .join-page form, #membership-cards {
     max-width: 1200px;
     padding: 1rem;
 }
