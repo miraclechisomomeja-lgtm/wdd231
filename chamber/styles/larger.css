@@ -71,10 +71,6 @@
     main h1 {
         text-align: left;
     }
-    .join-page form, #membership-cards {
-        max-width: 1200px;
-        padding: 1rem;
-    }
 
     .grid,
     #weather-forecast,
