@@ -599,6 +599,7 @@ footer h2 {
     padding: 0.3rem;
     border: 1px solid var(--background-color-2);
     border-radius: 6px;
+    font-size: 0.6rem;
 }
 
 .join-page dialog h2 {
