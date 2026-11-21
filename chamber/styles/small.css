@@ -1,12 +1,8 @@
 :root {
     --primary-color: #0a1a33;
-    --secondary-color: #D97736;
-    --secondary-dark: #A94F18;
     --secondary-light: #e8702a;
     --background-color: #ffffff;
-    --background-color-2: #ddd;
-    --border-color: #ddd;
-    --text-color: #292929;
+    --border-color: #9e9494;
 }
 
 * {
@@ -16,7 +12,7 @@
 body {
     font-family: "Open Sans", Arial, sans-serif;
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--primary-color);
     line-height: 1.6;
 }
 
@@ -74,7 +70,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-light);
 }
 
 nav {
@@ -86,7 +82,6 @@ nav.show {
     grid-column: 1/-1;
     width: auto;
     margin: 0;
-    padding: 0;
     background-color: var(--primary-color);
     padding: 1rem;
 
@@ -147,7 +142,7 @@ main h1 {
 }
 
 .menu button:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-light);
 }
 
 .business-card {
@@ -156,7 +151,7 @@ main h1 {
     background-color: var(--background-color);
     border: 1px solid var(--primary-color);
     border-radius: 10px;
-    border-top: 5px solid var(--secondary-color);
+    border-top: 5px solid var(--secondary-light);
     overflow: hidden;
     padding: 1rem;
     margin: 0 auto;
@@ -202,7 +197,7 @@ main h1 {
 }
 
 .business-card a:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-light);
 }
 
 .grid {
@@ -295,7 +290,7 @@ footer h2 {
 }
 
 .social a:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-light);
 }
 
 .social img {
@@ -382,7 +377,7 @@ footer h2 {
 }
 
 .hero-content a:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-light);
 }
 
 
@@ -397,13 +392,13 @@ footer h2 {
     background-color: var(--background-color);
     border: 1px solid var(--primary-color);
     border-radius: 10px;
-    border-top: 5px solid var(--secondary-color);
+    border-top: 5px solid var(--secondary-light);
     overflow: hidden;
     padding: 1rem;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
     text-align: center;
-    box-shadow: 0 3px 10px #000;
+    box-shadow: 0 3px 10px var(--primary-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -444,7 +439,7 @@ footer h2 {
 }
 
 #spotlight-container a:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-light);
 }
 
 #events,
@@ -465,7 +460,7 @@ footer h2 {
     background-color: var(--background-color);
     padding: 1rem;
     border-radius: 8px;
-    border-left: 5px solid var(--secondary-color);
+    border-left: 5px solid var(--secondary-light);
     margin-bottom: 1rem;
     box-shadow: 0 2px 6px;
 }
@@ -483,7 +478,7 @@ footer h2 {
     background-color: var(--secondary-light);
     padding: 1rem;
     box-shadow: 0 2px 6px;
-    border-left: 5px solid var(--secondary-color);
+    border-left: 5px solid var(--secondary-light);
     border-radius: 8px;
     text-align: center;
     margin-bottom: 1rem;
@@ -505,7 +500,7 @@ footer h2 {
     background-color: var(--background-color);
     padding: 1rem;
     box-shadow: 0 2px 6px;
-    border-left: 5px solid var(--secondary-color);
+    border-left: 5px solid var(--secondary-light);
     border-radius: 8px;
     text-align: center;
 }
@@ -519,12 +514,12 @@ footer h2 {
 /* Discover Orlu Section */
 #discover-orlu {
     padding: 2rem 1rem;
-    background-color: var(--background);
+    background-color: var(--background-color);
 }
 
 #discover-orlu>h2 {
     text-align: center;
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -544,13 +539,13 @@ footer h2 {
 .community-info article {
     background-color: white;
     padding: 1.5rem;
-    border-left: 5px solid var(--secondary);
+    border-left: 5px solid var(--secondary-light);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .community-info h3 {
-    color: var(--primary);
+    color: var(--primary-color);
     margin-top: 0;
 }
 
@@ -574,7 +569,7 @@ footer h2 {
 
 .join-page h1,
 .join-page h2 {
-    color: #172B4D;
+    color: var(--primary-color);
 }
 
 .join-page form {
@@ -596,7 +591,7 @@ footer h2 {
 .join-page textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #aaa;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font: inherit;
 }
@@ -607,15 +602,15 @@ footer h2 {
 }
 
 .join-page input[type="submit"] {
-    background-color: #172B4D;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     border: none;
     cursor: pointer;
     font-weight: bold;
 }
 
 .join-page input[type="submit"]:hover {
-    background-color: #D97736;
+    background-color: var(--secondary-light);
 }
 
 .membership-cards {
@@ -625,9 +620,9 @@ footer h2 {
 }
 
 .membership-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-left: 5px solid #D97736;
+    background-color: var(--background-color);
+    border: 1px solid var(--background-color);
+    border-left: 5px solid var(--secondary-light);
     border-radius: 8px;
     padding: 1.2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -663,7 +658,7 @@ footer h2 {
 
 
 .membership-card a:hover {
-    background-color: #D97736;
+    background-color: var(--secondary-light);
 }
 
 /* Membership card entrance animation */
@@ -686,8 +681,8 @@ footer h2 {
     border-radius: 0.25rem;
     padding: 1rem;
     margin: auto;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #777;
+    background-color: var(--background-color);
+    box-shadow: 0 0 3rem var(--background-color-2);
     width: 90%;
     max-width: 600px;
 }
@@ -704,6 +699,7 @@ footer h2 {
     border: 1px solid var(--background-color-2);
     border-radius: 6px;
 }
+
 
 .join-page dialog h2 {
     background-color: var(--primary-color);
