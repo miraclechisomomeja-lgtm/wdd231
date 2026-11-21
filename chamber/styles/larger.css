@@ -1,10 +1,12 @@
-}@media screen and (max-width: 599px) {
+@media screen and (max-width: 599px) {
     .list .business-card {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media screen and (min-width: 768px) {
+
     header {
         grid-template-columns: 50px minmax(0, 1fr);
     }
@@ -15,6 +17,7 @@
 
     header img {
         width: 80px;
+        max-width: 100%;
     }
 
     nav,
@@ -29,9 +32,10 @@
         display: none;
     }
 
-    .grid,
-    .community-info {
+    .grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+
     }
 
     main h1 {
@@ -39,18 +43,44 @@
         font-size: 2.5rem;
     }
 
+    .community-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     footer {
+        align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
         padding: 2rem;
+
     }
 }
 
 @media screen and (min-width: 1024px) {
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .directory-main {
+        max-width: 1200px;
+    }
+
+
+    main h1 {
+        text-align: left;
+
+    }
+
+
     header {
+        display: grid;
         grid-template-columns: 100px 1fr auto;
+        align-items: center;
         gap: 15px;
+
     }
 
     header img {
@@ -63,35 +93,30 @@
 
     nav {
         grid-column: 3;
+        display: flex;
         align-items: center;
         justify-self: end;
         gap: 15px;
     }
 
-    main h1 {
-        text-align: left;
-    }
 
-    .grid,
-    #weather-forecast,
-    #spotlight-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .directory-main {
-        max-width: 1200px;
-    }
-
-    #weather {
-        margin-top: 0;
-    }
 
     #weather-forecast {
+        grid-template-columns: repeat(3, 1fr);
         margin-bottom: 5rem;
     }
 
     #weather-forecast h3 {
-        grid-column: 1/-1;
+        grid-column: 1/4;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    #weather {
+        margin-top: 0;
     }
 
     #current-weather {
@@ -102,11 +127,18 @@
         grid-template-columns: 1fr 1fr;
         align-items: stretch;
         margin-bottom: 2rem;
+
     }
 
     .home-info>section {
         height: 100%;
+        box-sizing: border-box;
     }
+
+    .community-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 
     .join-page {
         display: grid;
@@ -128,7 +160,24 @@
         grid-row: 2;
     }
 
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
     .membership-card {
         padding: 1.85rem;
+    }
+
+    header,
+    footer {
+        max-width: 100%;
+    }
+
+    footer {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+
     }
 }
