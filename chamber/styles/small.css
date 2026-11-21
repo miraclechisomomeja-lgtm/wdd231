@@ -622,3 +622,15 @@ footer h2 {
     padding-inline: 1rem;
 }
 
+#current-weather {
+    min-height: 200px;
+}
+
+#weather-forecast {
+    min-height: 450px;
+}
+
+#spotlight-container {
+    min-height: 500px;
+}
+
