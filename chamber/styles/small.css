@@ -544,6 +544,20 @@ footer h2 {
     font-weight: bold;
 }
 
+.membership-price {
+    color: var(--secondary-light);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 1rem 0 0;
+}
+
+.membership-duration {
+    color: var(--primary-color);
+    font-size: .85rem;
+    margin-top: 0;
+    font-weight: 600;
+}
+
 .membership-cards {
     display: grid;
     grid-template-columns: 1fr;
