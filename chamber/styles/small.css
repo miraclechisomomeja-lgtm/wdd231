@@ -81,7 +81,6 @@ nav a {
     color: var(--background-color);
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
 nav.show a {
@@ -140,7 +139,6 @@ main #discover-orlu,
     border-radius: 5px;
     color: var(--background-color);
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 /* Cards (directory and spotlights) */
