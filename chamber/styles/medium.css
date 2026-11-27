@@ -41,8 +41,8 @@
     .discover-grid article {
         grid-template-areas:
             "name name"
-            "photograph address"
             "photograph description"
+            "photograph address"
             "button button "
 
     }
