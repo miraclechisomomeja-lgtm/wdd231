@@ -30,7 +30,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-
     footer {
         flex-direction: row;
         justify-content: space-between;
@@ -47,5 +46,5 @@
 
     }
 
-    
+
 }
