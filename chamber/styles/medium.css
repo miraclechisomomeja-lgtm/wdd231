@@ -1,0 +1,69 @@
+@media only screen and (min-width: 38rem) {
+
+
+    header {
+        grid-template-columns: 50px minmax(0, 1fr);
+    }
+
+    header .site-name {
+        font-size: 1.7rem;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    nav,
+    nav.show {
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .grid,
+    .community-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .discover-grid article {
+        grid-template-areas:
+            "name name"
+            "photograph description"
+            "photograph address"
+            "link link "
+
+    }
+
+    .discover-grid article h2 {
+        grid-area: name;
+    }
+
+    .discover-grid article figure {
+        grid-area: photograph;
+    }
+
+    .discover-grid article p {
+        grid-area: description;
+    }
+
+    .discover-grid address {
+        grid-area: address;
+    }
+
+    .discover-grid article a {
+        grid-area: link;
+    }
+}

@@ -114,7 +114,8 @@ main #discover-orlu,
 .home-info,
 #weather,
 #weather-forecast,
-#spotlights, .directory-main {
+#spotlights,
+.directory-main {
     max-width: 1200px;
     padding: 1rem;
 }
@@ -635,7 +636,8 @@ footer h2 {
     background-color: var(--primary-color);
     border-radius: 8px;
     color: var(--background-color);
-    text-align: center;font-size: 1rem;
+    text-align: center;
+    font-size: 1rem;
 }
 
 #results {
@@ -645,14 +647,94 @@ footer h2 {
     border-radius: 6px;
     white-space: pre-line;
 }
+
 .join-page form,
 .membership-options {
     padding-inline: 1rem;
 }
-.membership-options h2 {margin-top: 0;
+
+.membership-options h2 {
+    margin-top: 0;
 
 }
 
 .thankyou-main {
     padding: 2.5rem;
+}
+
+
+
+/* Discover page */
+.discover-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.discover-main h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#visit-message {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.discover-grid article {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-top: 5px solid var(--secondary-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-soft);
+
+
+
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+
+}
+
+
+.discover-grid article figure {
+    width: 100%;
+    margin: 0;
+
+}
+
+.discover-grid article img {
+    border-radius: 8px;
+}
+
+.discover-grid address {
+    margin: 1rem;
+}
+
+.discover-grid article p {
+    font-size: 0.95rem;
+    margin: 1rem;
+}
+
+.discover-grid article a {
+    padding: 0.85rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+.discover-grid a:hover {
+    background-color: var(--secondary-light);
 }
