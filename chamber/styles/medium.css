@@ -41,29 +41,11 @@
     .discover-grid article {
         grid-template-areas:
             "name name"
-            "photograph description"
             "photograph address"
-            "link link "
+            "photograph description"
+            "button button "
 
     }
 
-    .discover-grid article h2 {
-        grid-area: name;
-    }
-
-    .discover-grid article figure {
-        grid-area: photograph;
-    }
-
-    .discover-grid article p {
-        grid-area: description;
-    }
-
-    .discover-grid address {
-        grid-area: address;
-    }
-
-    .discover-grid article a {
-        grid-area: link;
-    }
+    
 }

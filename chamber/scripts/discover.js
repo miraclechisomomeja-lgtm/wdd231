@@ -36,9 +36,10 @@ localStorage.setItem("lastVisit", now);
 // Display places
 function displayPlaces(places) {
     places.forEach((place, index) => {
+        const aboveFold = index < 2;
         const card = document.createElement("article");
-        const imageLoading = index === 0 ? "eager" : "lazy";
-        const imagePriority = index === 0 ? "high" : "auto";
+        const imageLoading = aboveFold ? "eager" : "lazy";
+        const imagePriority = aboveFold ? "high" : "auto";
 
         card.innerHTML = `
         <h2>${place.name}</h2>
