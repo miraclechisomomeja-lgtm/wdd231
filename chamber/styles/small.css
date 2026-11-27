@@ -675,6 +675,7 @@ footer h2 {
 .discover-grid {
     display: grid;
     gap: 1rem;
+    animation: pageEntrance 1s ease-out;
     min-height: 1800px;
 
 }
