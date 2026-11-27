@@ -30,6 +30,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .list .business-card {
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+
+    }
+
     footer {
         flex-direction: row;
         justify-content: space-between;

@@ -231,7 +231,7 @@ main #discover-orlu,
 
 .list .business-card {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 1rem;
     max-width: 90%;
