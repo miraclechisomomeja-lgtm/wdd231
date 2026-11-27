@@ -675,7 +675,6 @@ footer h2 {
 .discover-grid {
     display: grid;
     gap: 1rem;
-    animation: pageEntrance 1s ease-out;
 
 }
 
@@ -684,8 +683,8 @@ footer h2 {
     grid-template-areas:
         "name"
         "photograph"
-        "address"
         "description"
+        "address"
         "button";
     padding: 1rem;
     background-color: var(--background-color);
@@ -720,12 +719,12 @@ footer h2 {
 .discover-grid article p {
     font-size: 0.95rem;
     margin: 1rem;
-    grid-area: address;
+    grid-area: description;
 }
 
 .discover-grid address {
     margin: 1rem;
-    grid-area: description;
+    grid-area: address;
 }
 
 .discover-grid article a {
