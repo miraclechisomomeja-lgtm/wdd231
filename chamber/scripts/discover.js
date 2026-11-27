@@ -35,13 +35,15 @@ localStorage.setItem("lastVisit", now);
 
 // Display places
 function displayPlaces(places) {
-    places.forEach(place => {
+    places.forEach((place, index) => {
         const card = document.createElement("article");
+        const imageLoading = index === 0 ? "eager" : "lazy";
+        const imagePriority = index === 0 ? "high" : "auto";
 
         card.innerHTML = `
         <h2>${place.name}</h2>
         <figure>
-        <img src="${place.image}" alt="${place.name}" loading="lazy">
+        <img src="${place.image}" alt="${place.name}" width="300" height="200" loading="${imageLoading}" fetchpriority="${imagePriority}">
         </figure>
         <p>${place.description}</p>
         <address>${place.address}</address>
