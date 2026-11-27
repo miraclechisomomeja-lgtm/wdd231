@@ -238,7 +238,6 @@ main #discover-orlu,
     margin: 2rem auto 0;
     border: 1px solid var(--background-color-2);
     border-radius: 0;
-    text-align: left;
     animation: pageEntrance 1s ease-out;
 }
 
