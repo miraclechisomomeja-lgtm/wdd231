@@ -48,8 +48,8 @@ function displayPlaces(places) {
         </figure>
         <p>${place.description}</p>
         <address>${place.address}</address>
-        <a href="${place.url}" target="_blank" rel="noopener noreferrer">Learn More</a>
-    `;
+        <a href="${place.url}" target="_blank" rel="noopener noreferrer" arial-label="Learn More about ${place.name}">Learn More</a>
+s    `;
 
         discoverCards.appendChild(card);
     });
